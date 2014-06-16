@@ -1,0 +1,10 @@
+<ion-content>
+    <div class="list" ng-repeat="menu in menus">
+        <div class="item item-divider" style="background-color: #aaaaaa; color: #ffffff">
+            {{menu.title}}
+        </div>
+        <a class="item" href="#{{menuItem.page}}" ng-repeat="menuItem in menu.tabs" ng-click="toggleLeft()">
+            {{menuItem.title}}
+        </a>
+    </div>
+</ion-content>

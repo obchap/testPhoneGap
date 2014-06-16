@@ -1,0 +1,56 @@
+<style>
+    .hc-ion-slide-box{
+        width: 85%;
+        margin:10px auto 10px auto;
+        border: 1px black solid;
+    }
+    .hc-ion-slide-content{
+        height: 200px;
+        padding: 10px;
+    }
+    .hc-tab-icon{
+        display: inline-block;
+        width: 30px;
+        text-align: center;
+    }
+    .hc-tab-icon i{
+        font-size: 1.5em;
+    }
+</style>
+
+<div>
+    <ion-slide-box on-slide-changed="slideHasChanged($index)" class="hc-ion-slide-box">
+        <ion-slide ng-repeat="carouselItem in carouselItems">
+            <div class="hc-ion-slide-content" class="rounded">
+                <strong>
+                    {{carouselItem.title}}
+                </strong>
+                <p>
+                    {{carouselItem.sender}}
+                </p>
+                <p>
+                    {{carouselItem.time}}
+                </p>
+                <p>
+                    {{carouselItem.message}}
+                </p>
+
+            </div>
+        </ion-slide>
+    </ion-slide-box>
+
+    <ion-list>
+        <ion-item ng-repeat="module in modules" class="item">
+            <a href="#{{module.page}}" style="text-decoration: none; color: #000000;">
+                <span class="hc-tab-icon">
+                    <i class="icon {{module.class}}"></i>
+                </span>
+                &nbsp;&nbsp;{{module.title}}
+                <span class="badge badge-assertive" ng-show="module.count > 0">{{module.count}}</span>
+                <ion-option-button class="button-assertive">
+                    Delete
+                </ion-option-button>
+            </a>
+        </ion-item>
+    </ion-list>
+</div>

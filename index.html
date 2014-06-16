@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Wireframes</title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="app/app.js"></script>
+    <script src="app/login/login.js"></script>
+  </head>
+  <body ng-app="loginApp">
+    <div ng-controller="loginController">
+        <div style="margin-top: 25px; text-align: center;">
+            <img src="img/block-professionals-photo.jpg">
+        </div>
+        <form>
+            <div class="list list-inset">
+                <label class="item item-input">
+                    <input type="text" placeholder="First Name">
+                </label>
+                <br>
+                <label class="item item-input">
+                    <input type="text" placeholder="Password">
+                </label>
+                <div style="float:right;">
+                    <a href="#" style="text-decoration: none; color: black">
+                        Forgot Username or Password?
+                    </a>
+                </div>
+                <label class="toggle" style="display:flex">
+                    <input type="checkbox">
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                    <span style="align-self: center">Remember Me</span>
+                </label>
+                <button ng-click="login()" class="button button-block">
+                    Sign In
+                </button>
+            </div>
+        </form>
+    </div>
+  </body>
+</html>

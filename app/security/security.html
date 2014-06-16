@@ -1,0 +1,40 @@
+<form>
+    Enable password lock
+    <label class="toggle">
+        <input type="checkbox">
+        <div class="track">
+            <div class="handle"></div>
+        </div>
+    </label>
+    <div></div>
+    <br>
+    <label class="item item-input item-stacked-label">
+        <span class="input-label">Enter a 4-digit Password</span>
+        <input type="password">
+    </label>
+    <br>
+    <label class="item item-input item-stacked-label">
+        <span class="input-label">Confirm Password</span>
+        <input type="password">
+    </label>
+    <br>
+    <label class="item item-input item-stacked-label">
+        <span class="input-label">Select a Security Question</span>
+        <br>
+        <select>
+            <option ng-repeat="question in questions">
+                {{question.text}}
+            </option>
+        </select>
+    </label>
+    <br>
+    <label class="item item-input item-stacked-label">
+        <span class="input-label">Answer</span>
+        <input type="text">
+    </label>
+    <br>
+    <div>
+        <button class="button button-clear button-assertive">Cancel</button>
+        <button class="button button-clear button-balanced">Save</button>
+    </div>
+</form>
